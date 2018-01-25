@@ -1,0 +1,8 @@
+.start_text {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}

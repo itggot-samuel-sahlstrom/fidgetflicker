@@ -1,0 +1,19 @@
+p you are logged in lmao good job now get some friends idk
+
+p nu när du ändå e här så kan du lika gärna fixa nåra vänner va? fyll i din kompis så kommer vi väl hitta honom/henne idk tho.
+
+form action="/friend_request" method="POST"
+    input type="input" placeholder="Username" name="request_user"
+    input type="submit" value="Send friend request"
+
+a.create-note href="/notes/create":button Create Note
+.notes
+    - notes.each do |note|
+        .note-card
+            p = note["content"]
+            .note-controls
+                form action="/notes/#{note["id"]}/delete" method="POST"
+                    input.button type="submit" value="Delete"
+                a.button href="/notes/#{note["id"]}/edit": button Edit
+
+a href='/' Go back.    
